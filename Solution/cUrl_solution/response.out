@@ -1,0 +1,4 @@
+"Request :" 
+Bonjour, comment allez-vous? 
+"Response :" 
+[{"language":"fr","score":1.0,"isTranslationSupported":true,"isTransliterationSupported":false}]
