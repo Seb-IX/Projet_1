@@ -25,11 +25,11 @@ MacOS :<br>
 => export COGNITIVE_SERVICE_KEY=<API_KEY><br>
 <br>
 Windows :<br>
-=> setx COGNITIVE_SERVICE_ENDPOINT <ENDPOINT> /m<br>
+=> setx COGNITIVE_SERVICE_ENDPOINT <API_ENDPOINT> /m<br>
 Linux : <br>
-=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT><br>
+=> export COGNITIVE_SERVICE_ENDPOINT=<API_ENDPOINT><br>
 MacOS :<br>
-=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT><br>
+=> export COGNITIVE_SERVICE_ENDPOINT=<API_ENDPOINT><br>
 
 ## first is cUrl solution script :
 

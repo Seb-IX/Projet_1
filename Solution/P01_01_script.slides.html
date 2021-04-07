@@ -14386,19 +14386,19 @@ div.jp-OutputPrompt {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Pr&#233;sentation-de-l'utilisation-du-service-cognitif-Microsoft-Azure">Pr&#233;sentation de l'utilisation du service cognitif Microsoft Azure<a class="anchor-link" href="#Pr&#233;sentation-de-l'utilisation-du-service-cognitif-Microsoft-Azure">&#182;</a></h1><h2 id="Bien-d&#233;marrer-:">Bien d&#233;marrer :<a class="anchor-link" href="#Bien-d&#233;marrer-:">&#182;</a></h2><p>Pour reproduire se script quelque prerequis sont nécessaire:</p>
+<h1 id="Pr&#233;sentation-de-l'utilisation-du-service-cognitif-Microsoft-Azure">Pr&#233;sentation de l'utilisation du service cognitif Microsoft Azure<a class="anchor-link" href="#Pr&#233;sentation-de-l'utilisation-du-service-cognitif-Microsoft-Azure">&#182;</a></h1><h2 id="Bien-d&#233;marrer-:">Bien d&#233;marrer :<a class="anchor-link" href="#Bien-d&#233;marrer-:">&#182;</a></h2><p>Pour reproduire ce script quelques prérequis sont nécessaires:</p>
 <p><ul>
     <li>Jupyter, notebook pour l'utilisation de ce script... </li>
     <li>Un compte microsoft (création sur <a href="https://portal.azure.com/">portail azure</a>) </li>
     <li>Créer une ressource <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics"> Cognitive service (Text Analytic) </a></li>
 </ul>
 <br></p>
-<blockquote><p>Il est également possible de créer un service cognitif mais nous allons utiliser que l'analyse de texte.</p>
+<blockquote><p>Il est également possible de créer un service cognitif mais nous n'utiliserons que l'analyse de texte.</p>
 </blockquote>
-<p>Pour créer cette ressource rendez-vous sur votre portail azure dans la section creation Analytique de texte (<em>lien au dessus</em>), puis suivre la procédure de création. <strong>(avant ça, il est nécessaire de créer un abonnement, pour ma part j'ai choisi paiement à l'utilisation)</strong>
+<p>Pour créer cette ressource rendez-vous sur votre portail azure dans la section création Analytique de texte (<em>lien au dessus</em>), puis suivre la procédure de création. <strong>(avant ça, il est nécessaire de créer un abonnement, pour ma part j'ai choisi paiement à l'utilisation)</strong>
 <br>
 <br>
-Il est important de créer un nom unique pour votre ressource et selectionner l'emplacement de votre choix. Ensuite selectionner votre abonnement et le "tarification" sur "Free (F0)".
+Il est important de créer un nom unique pour votre ressource et sélectionnez l'emplacement de votre choix. Ensuite sélectionnez votre abonnement et le "tarification" sur "Free (F0)".
 <br></p>
 <blockquote><p>J'utilise également une variable d'environement pour sécuriser le mot de passe du service cognitif de microsoft Azure.
 <br></p>
@@ -14410,7 +14410,7 @@ Il est important de créer un nom unique pour votre ressource et selectionner l'
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Comment-cr&#233;er-une-variable-d'environement-?">Comment cr&#233;er une variable d'environement ?<a class="anchor-link" href="#Comment-cr&#233;er-une-variable-d'environement-?">&#182;</a></h2><p>Avant tout il faut avoir une clé de notre API Cognitive service et également l'adresse du point de terminaison, pour ça rendez-vous sur votre ressource fraichement crée puis allez dans la section "Clés et point de terminaison" OU "Keys and Endpoint".<br></p>
+<h2 id="Comment-cr&#233;er-une-variable-d'environement-?">Comment cr&#233;er une variable d'environement ?<a class="anchor-link" href="#Comment-cr&#233;er-une-variable-d'environement-?">&#182;</a></h2><p>Avant tout il faut avoir une clé de notre API Cognitive service et également l'adresse du point de terminaison. Pour ça rendez-vous sur votre ressource fraichement créée puis allez dans la section "Clés et point de terminaison" OU "Keys and Endpoint".<br></p>
 <ul>
     <li>Sur Windows : <code>setx COGNITIVE_SERVICE_KEY YOUR_API_KEY /m</code> </li>
     <li>Sur Linux : <code>export COGNITIVE_SERVICE_KEY=YOUR_API_KEY </code> </li>
@@ -14421,15 +14421,15 @@ Il est important de créer un nom unique pour votre ressource et selectionner l'
 </aside><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Test-du-fonctionnement-du-service-cognitif">Test du fonctionnement du service cognitif<a class="anchor-link" href="#Test-du-fonctionnement-du-service-cognitif">&#182;</a></h1><p>Le coginitive service de microsoft Azure est un service qui offre de multiples possibilitées, pour notre contexte, qui est la création d'un chatbot avec la fonction polyglotte, le service qui nous interesse est donc celui du language avec le service <strong>Analyse de texte</strong>. 
+<h1 id="Test-du-fonctionnement-du-service-cognitif">Test du fonctionnement du service cognitif<a class="anchor-link" href="#Test-du-fonctionnement-du-service-cognitif">&#182;</a></h1><p>Le service coginitif de microsoft Azure est un service qui offre de multiples possibilités, pour notre contexte, qui est la création d'un chatbot avec la fonction polyglotte, le service qui nous intéresse est donc celui du language avec le service <strong>Analyse de texte</strong>. 
 <br><br>
-Chaque <em>service</em> du cognitive service Azure implémente une surcouche API_REST qui permet de communiquer avec celui-ci.</p>
+Chaque <em>service</em> du service cognitif Azure implémente une surcouche API_REST qui permet de communiquer avec celui-ci.</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="S&#233;curisation-de-la-cl&#233;">S&#233;curisation de la cl&#233;<a class="anchor-link" href="#S&#233;curisation-de-la-cl&#233;">&#182;</a></h2><p>Pour ça on récupère la clé de sécuritée stockée dans les variables d'environement.</p>
+<h2 id="S&#233;curisation-de-la-cl&#233;">S&#233;curisation de la cl&#233;<a class="anchor-link" href="#S&#233;curisation-de-la-cl&#233;">&#182;</a></h2><p>Pour ça on récupère la clé de sécurité stockée dans les variables d'environnement.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14451,7 +14451,7 @@ Chaque <em>service</em> du cognitive service Azure implémente une surcouche API
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Pr&#233;paration-de-la-requ&#234;te-d'envoie-au-service-Azure">Pr&#233;paration de la requ&#234;te d'envoie au service Azure<a class="anchor-link" href="#Pr&#233;paration-de-la-requ&#234;te-d'envoie-au-service-Azure">&#182;</a></h2><p>On récupère le endpoint du service Azure puis on prépare l'url d'envoie avec Authentification dans le header de la requête.</p>
+<h2 id="Pr&#233;paration-de-la-requ&#234;te-d'envoi-au-service-Azure">Pr&#233;paration de la requ&#234;te d'envoi au service Azure<a class="anchor-link" href="#Pr&#233;paration-de-la-requ&#234;te-d'envoi-au-service-Azure">&#182;</a></h2><p>On récupère le endpoint du service Azure puis on prépare l'url d'envoi avec Authentification dans le header de la requête.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14487,7 +14487,8 @@ Chaque <em>service</em> du cognitive service Azure implémente une surcouche API
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Pr&#233;paration-du-texte-&#224;-envoyer-(-test-avec-5-langues-)">Pr&#233;paration du texte &#224; envoyer ( test avec 5 langues )<a class="anchor-link" href="#Pr&#233;paration-du-texte-&#224;-envoyer-(-test-avec-5-langues-)">&#182;</a></h2><p>Se test est fait sur 5 langues choisies par mes soins, le même texte est juste traduit de 5 façon différentes.</p>
+<h2 id="Pr&#233;paration-du-texte-&#224;-envoyer-(-test-avec-5-langues-)">Pr&#233;paration du texte &#224; envoyer ( test avec 5 langues )<a class="anchor-link" href="#Pr&#233;paration-du-texte-&#224;-envoyer-(-test-avec-5-langues-)">&#182;</a></h2><p>Ce test est fait sur 5 langues choisies par mes soins. <br>
+Il s'agit du même texte, traduit de 5 façons différentes.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14526,7 +14527,7 @@ Chaque <em>service</em> du cognitive service Azure implémente une surcouche API
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Envoie-et-analyse-du-retour-de-la-requ&#234;te-(json)">Envoie et analyse du retour de la requ&#234;te (json)<a class="anchor-link" href="#Envoie-et-analyse-du-retour-de-la-requ&#234;te-(json)">&#182;</a></h2>
+<h2 id="Envoi-et-analyse-du-retour-de-la-requ&#234;te-(json)">Envoi et analyse du retour de la requ&#234;te (json)<a class="anchor-link" href="#Envoi-et-analyse-du-retour-de-la-requ&#234;te-(json)">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14534,7 +14535,7 @@ Chaque <em>service</em> du cognitive service Azure implémente une surcouche API
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Envoie de la requête a l&#39;API du service cognitive Azure</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Envoi de la requête a l&#39;API du service cognitive Azure</span>
 <span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">constructed_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">sendRequest</span><span class="p">)</span>
 
 <span class="c1"># Récupération des données</span>
@@ -14623,20 +14624,20 @@ Chaque <em>service</em> du cognitive service Azure implémente une surcouche API
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Le texte envoyé à était dans l'ensemble correctement identifié. <br>
+<p>Le texte envoyé a été dans l'ensemble correctement identifié. <br>
 <br>
-On remarque 4 éléments clé sur le retour de la requête :</p>
+On remarque 4 éléments clés sur le retour de la requête :</p>
 <ol>
     <li>"id" correspond a l'ID du document envoyé</li>
     <li>"name" correspond à la langue en anglais</li>
-    <li>"iso6391Name" correspond a l'identification de la langue par sont acronyme ISO 639-1 "fr" pour "French" par exemple. <a href="https://docs.microsoft.com/fr-fr/azure/cognitive-services/text-analytics/language-support?tabs=language-detection">Acronyme à retrouver ici.</a></li>
+    <li>"iso6391Name" correspond a l'identification de la langue par son acronyme ISO 639-1 "fr" pour "French" par exemple. <a href="https://docs.microsoft.com/fr-fr/azure/cognitive-services/text-analytics/language-support?tabs=language-detection">Acronyme à retrouver ici.</a></li>
     <li>"confidenceScore" correspond à la confiance du résultat. avec 0 qui est un score faible et 1 un indice de confiance élevé</li>
 </ol>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="R&#233;cup&#233;ration-et-Analyse-du-jeu-de-donn&#233;es">R&#233;cup&#233;ration et Analyse du jeu de donn&#233;es<a class="anchor-link" href="#R&#233;cup&#233;ration-et-Analyse-du-jeu-de-donn&#233;es">&#182;</a></h1><p>Dans cette partie nous allons récuperer puis faire une analyse rapide du jeu de données.</p>
+<h1 id="R&#233;cup&#233;ration-et-Analyse-du-jeu-de-donn&#233;es">R&#233;cup&#233;ration et Analyse du jeu de donn&#233;es<a class="anchor-link" href="#R&#233;cup&#233;ration-et-Analyse-du-jeu-de-donn&#233;es">&#182;</a></h1><p>Dans cette partie nous allons récupérer puis faire une analyse rapide du jeu de données.</p>
 
 </div>
 </div></section><section>
@@ -14788,8 +14789,8 @@ On remarque 4 éléments clé sur le retour de la requête :</p>
 <p>Nous avons maintenant une data frame de 117.500 lignes avec le texte et le label associés.
 <br><br>
 Le label est le "Code pour la représentration des noms de langue" = <strong>ISO369-3</strong>. <br>
-Cet indicateur vas nous permettre de merge <strong>"label"</strong> avec <strong>"ISO 369-3"</strong> du fichier label.<br>
-Le <strong>Wiki Code</strong> du fichier Label permettra de connaitre la langue lors de la détection avec Azure car c'est celui qui se rapporche le plus du format final (que nous retourne le service).</p>
+Cet indicateur va nous permettre de merge <strong>"label"</strong> avec <strong>"ISO 369-3"</strong> du fichier label.<br>
+Le <strong>Wiki Code</strong> du fichier Label permettra de connaître la langue lors de la détection avec Azure car c'est celui qui se rapporche le plus du format final (que nous retourne le service).</p>
 
 </div>
 </div></section><section>
@@ -14805,9 +14806,9 @@ Le <strong>Wiki Code</strong> du fichier Label permettra de connaitre la langue 
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Récupération du fichier label</span>
 <span class="n">lab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/labels.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
-<span class="c1"># On ne conserve que les columns qui peuvent nous interesser</span>
+<span class="c1"># On ne conserve que les columns qui peuvent nous intéresser</span>
 <span class="n">lab</span><span class="o">=</span> <span class="n">lab</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Writing system&quot;</span><span class="p">,</span><span class="s2">&quot;German&quot;</span><span class="p">,</span><span class="s2">&quot;Remarks&quot;</span><span class="p">,</span><span class="s2">&quot;Synonyms&quot;</span><span class="p">,</span><span class="s2">&quot;Language family&quot;</span><span class="p">])</span>
-<span class="c1"># On nettoye le jeu de données des valeurs nulle</span>
+<span class="c1"># On nettoie le jeu de données des valeurs nulles</span>
 <span class="n">lab</span><span class="o">=</span><span class="n">lab</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;any&quot;</span><span class="p">)</span>
 
 
@@ -14928,7 +14929,7 @@ Le <strong>Wiki Code</strong> du fichier Label permettra de connaitre la langue 
 <h1 id="Pr&#233;pration-du-jeu-de-donn&#233;es">Pr&#233;pration du jeu de donn&#233;es<a class="anchor-link" href="#Pr&#233;pration-du-jeu-de-donn&#233;es">&#182;</a></h1><p>Nous avons déjà nettoyé le jeu de données et préparé une partie du jeu de données. <br>
 Il nous reste 2 informations à combiner :</p>
 <ol>
-    <li>Le dataframe contenant tous les paragraphes et le label associés</li>
+    <li>Le dataframe contenant tous les paragraphes et les labels associés</li>
     <li>le fichier de label qui lui associe le label et l'ISO 639-1 (Wiki Code)</li>
 </ol>
 </div>
@@ -15151,7 +15152,7 @@ dtype: float64</pre>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="S&#233;lection-des-5-langues-les-plus-parl&#233;es">S&#233;lection des 5 langues les plus parl&#233;es<a class="anchor-link" href="#S&#233;lection-des-5-langues-les-plus-parl&#233;es">&#182;</a></h1><p>Dans cette partie nous allons selectionner les 5 langues les plus parlées dans le monde afin de faire un test du service cognitive sur sa fiabilité à donner le bon résultat.<br>
+<h1 id="S&#233;lection-des-5-langues-les-plus-parl&#233;es">S&#233;lection des 5 langues les plus parl&#233;es<a class="anchor-link" href="#S&#233;lection-des-5-langues-les-plus-parl&#233;es">&#182;</a></h1><p>Dans cette partie nous allons sélectionner les 5 langues les plus parlées dans le monde afin de faire un test du service cognitive sur sa fiabilité à donner le bon résultat.<br>
 <br>
 Les 5 langues les plus parlées dans le monde sont dans l'ordre :</p>
 <ol>
@@ -15175,7 +15176,7 @@ Les 5 langues les plus parlées dans le monde sont dans l'ordre :</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># On recupére les 5 ISO 639-1 des 5 langue les plus parlé dans le monde</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># On recupère les 5 ISO 639-1 des 5 langues les plus parlées dans le monde</span>
 <span class="n">five_langue</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zh&#39;</span><span class="p">,</span> <span class="s1">&#39;es&#39;</span><span class="p">,</span><span class="s1">&#39;en&#39;</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span><span class="s1">&#39;ar&#39;</span><span class="p">]</span>
 <span class="c1"># Pour retrouver la forme ISO 639-1(Wiki Code) on peut utiliser cette ligne :</span>
 <span class="n">Langue_to_test</span> <span class="o">=</span> <span class="s1">&#39;Standard Chinese&#39;</span>
@@ -15367,10 +15368,10 @@ Les 5 langues les plus parlées dans le monde sont dans l'ordre :</p>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Envoi-du-dataset-au-service-cognitif-Azure">Envoi du dataset au service cognitif Azure<a class="anchor-link" href="#Envoi-du-dataset-au-service-cognitif-Azure">&#182;</a></h1><blockquote><p>Pour plus de clarté, je réecrie certaine partie de code faite dans la partie test du service cognitif</p>
+<h1 id="Envoi-du-dataset-au-service-cognitif-Azure">Envoi du dataset au service cognitif Azure<a class="anchor-link" href="#Envoi-du-dataset-au-service-cognitif-Azure">&#182;</a></h1><blockquote><p>Pour plus de clarté, je réécrie certaine partie de code faite dans la partie test du service cognitif</p>
 </blockquote>
 <p>Dans l'ensemble le code d'envoie est similaire au premier utilisé. <br>
-J'utiliserais ici les librairies Azure, les 2 fonctionnements peuvent être utilisés.</p>
+J'utiliserai ici les librairies Azure, les 2 fonctionnements peuvent être utilisés.</p>
 
 </div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15458,7 +15459,7 @@ J'utiliserais ici les librairies Azure, les 2 fonctionnements peuvent être util
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Le service cognitif Azure est maintenant prêt à être utilisé, pour ce faire nous allons créer un échantillons de données pour récupérer le nombre de textes dans chaque langues définis au dessus dans la variable <code>nb_text</code>.</p>
+<p>Le service cognitif Azure est maintenant prêt à être utilisé. Pour ce faire nous allons créer un échantillon de données pour récupérer le nombre de texte dans chaque langue définit au dessus dans la variable <code>nb_text</code>.</p>
 
 </div>
 </div></section><section>
@@ -15472,7 +15473,7 @@ J'utiliserais ici les librairies Azure, les 2 fonctionnements peuvent être util
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cette ligne permet de selectionner seulement les n premier ligne pour chaque lang iso choisi </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cette ligne permet de sélectionner seulement les n premier ligne pour chaque lang iso choisi </span>
 <span class="c1"># Et également de les formater au format &quot;record&quot; =&gt; &quot;key&quot;=&gt; &quot;value&quot;</span>
 <span class="n">sample_test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;lang_iso_639-1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">nb_text</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="s2">&quot;records&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La taille de l&#39;échantillon est de: &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">sample_test</span><span class="p">))</span>
@@ -15512,7 +15513,7 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># résultat contenant tout les documents</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># résultat contenant tous les documents</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">language_detection</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="n">sample_test</span><span class="p">)</span>
 </pre></div>
 
@@ -15562,10 +15563,10 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ajout de 2 columns &quot;score&quot; et &quot;detect_lang&quot; qui sont les résultat de la requête azure</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ajout de 2 columns &quot;score&quot; et &quot;detect_lang&quot; qui sont les résultats de la requête azure</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sample_test</span><span class="p">)):</span>
     <span class="n">sample_test</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;score&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">mapResult</span><span class="p">[</span><span class="n">sample_test</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]][</span><span class="s2">&quot;score&quot;</span><span class="p">]</span>
-    <span class="c1"># iso 639-1 ne prend que 2 caractère, il faut donc prendre que les 2 premier caractère.</span>
+    <span class="c1"># iso 639-1 ne prend que 2 caractères, il faut donc prendre que les 2 premiers caractères.</span>
     <span class="n">sample_test</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;detect_lang&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">mapResult</span><span class="p">[</span><span class="n">sample_test</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]][</span><span class="s2">&quot;lang_iso&quot;</span><span class="p">][:</span><span class="mi">2</span><span class="p">]</span>
     
 </pre></div>
@@ -15578,7 +15579,7 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Comparatif-attendue/obtenue">Comparatif attendue/obtenue<a class="anchor-link" href="#Comparatif-attendue/obtenue">&#182;</a></h2>
+<h2 id="Comparatif-attendu/obtenu">Comparatif attendu/obtenu<a class="anchor-link" href="#Comparatif-attendu/obtenu">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15588,7 +15589,7 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Transformation dictionnaire en dataframe</span>
 <span class="n">sample_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">sample_test</span><span class="p">)</span>
-<span class="c1"># Analyse de l&#39;estimation avec 1 comme resultat positive et 0 négative</span>
+<span class="c1"># Analyse de l&#39;estimation avec 1 comme resultat positif et 0 négatif</span>
 <span class="n">sample_test</span><span class="p">[</span><span class="s2">&quot;good_detection&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">sample_test</span><span class="p">[</span><span class="s2">&quot;lang_iso_639-1&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">sample_test</span><span class="p">[</span><span class="s2">&quot;detect_lang&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
 <span class="n">sample_test</span>
@@ -15898,7 +15899,7 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pour afficher tout le texte de la ligne</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_rows</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="c1"># On récupère que les &quot;mauvaises&quot; detection</span>
+<span class="c1"># On ne récupère que les &quot;mauvaises&quot; détections</span>
 <span class="n">sample_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sample_test</span><span class="o">.</span><span class="n">good_detection</span><span class="o">==</span><span class="mi">0</span><span class="p">][[</span><span class="s2">&quot;text&quot;</span><span class="p">,</span><span class="s2">&quot;score&quot;</span><span class="p">,</span><span class="s2">&quot;lang_iso_639-1&quot;</span><span class="p">,</span><span class="s2">&quot;detect_lang&quot;</span><span class="p">]]</span>
 </pre></div>
 
@@ -15973,7 +15974,7 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On remarque que les textes qui on était detectés comme mauvaise identification de la langue sont écrit principalement dans la langue detecté car se sont <strong>des noms de livre ou de personne certainement Anglophone</strong>.</p>
+<p>On remarque que les textes qui ont été detectés comme mauvaise identification de la langue sont écrits principalement dans la langue detecté car se sont <strong>des noms de livres ou de personnes certainement Anglophone</strong>.</p>
 
 </div>
 </div></section></section><section><section>
@@ -16032,9 +16033,9 @@ Format d&#39;un échantillon:  {&#39;text&#39;: &#39;كانت رحلة كوك - 
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><p>Les résultats du service Cognitif Azure <strong>Analyse de texte</strong> sont très positives.<br>
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><p>Les résultats du service Cognitif Azure <strong>Analyse de texte</strong> sont très positifs.<br>
 <br>
-Le taux de réussite est de 100% si on ommet les 2 résultats sur 500 qui ont était induit par des noms propre d'auteur ou de titre de livre certainement Anglophone.<br></p>
+Le taux de réussite est de 100% si on ommet les 2 résultats sur 500 qui ont été induit par des noms propres d'auteurs ou de titres de livres certainement Anglophone.<br></p>
 
 </div>
 </div></section></section>
