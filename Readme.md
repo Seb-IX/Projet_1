@@ -10,4 +10,4 @@
 - /Solution/ :
 	This directory contains Solution and test final submit for jury to valideted my project
 	
-# TUCCIO Sébastien
+by TUCCIO Sébastien

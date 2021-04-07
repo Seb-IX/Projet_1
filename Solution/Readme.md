@@ -1,18 +1,21 @@
 # Requierement :
-- CURL
+- cUrl
 - jupyter, notebook
 - python / anaconda
 
 # To create Coginitive Service on microsft AZURE :
  
-1 - create account on portal.AZURE (https://portal.azure.com/)
-2 - create subscription cost (eg. : pay to use)
-3 - create ressources group with your subscription cost as you want
-4 - create ressource Cognitive service (https://portal.azure.com/#create/Microsoft.CognitiveServicesAllInOne) and associate with your ressources group (choose location gloabl) and use your tariff level
-5 - Now you can take key to access and endpont (for global endpoint : https://api.cognitive.microsofttranslator.com/)
+1. Create account on portal.AZURE (https://portal.azure.com/)
+2. Create subscription cost (eg. : pay to use)
+3. Create ressources group with your subscription cost as you want
+4. Create ressource Cognitive service "text analytic" (https://portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics) and associate with your ressources group (choose your favorite location) and use your tariff level => "Free F0"
+5. Now you can take key to access and endpont on your ressource create => "Keys and Endpoint"
 
-## 2 solution is Enable : 
-# Before any solution please store key access) 
+# Download data on :
+
+https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/AI+Engineer/Project+1+Discover+the+AI%C2%A0Engineer+Job/Dataset+project+1+AI%C2%A0Engineer.zip
+
+# 2 solution is Enable :
 
 Windows :
 => setx COGNITIVE_SERVICE_KEY <API_KEY> /m
@@ -21,10 +24,17 @@ Linux :
 MacOS :
 => export COGNITIVE_SERVICE_KEY=<API_KEY>
 
-# first is cUrl solution script :
+Windows :
+=> setx COGNITIVE_SERVICE_ENDPOINT <ENDPOINT> /m
+Linux : 
+=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT>
+MacOS :
+=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT>
+
+## first is cUrl solution script :
 
 Windows :
-=> cUrl_Solution/requestSecured.bat "The text you want to test for language detection"
+=> cUrl_Solution/request.bat "The text you want to test for language detection"
 
 Linux :
 => cd cUrl_Soltion 
@@ -37,8 +47,12 @@ MacOS :
 Response store in => response.out
 
 
-# run anaconda cmd or navigator and go to root project :
+## second is notebook run anaconda cmd or navigator and go to root project :
 
-1 - open CognitiveServiceAzure
-2 - run all Cell
+Ourvrir le notebook :
+`jupyter notebook P01_01_script.ipynb`
 
+# Comamande utile :
+
+Création du mode slideshow (bien organiser dans le notebook la disposition des diapos : View => Cell Toolbar => Diaporama)
+`jupyter nbconvert P01_01_script.ipynb --to slides --post serve`

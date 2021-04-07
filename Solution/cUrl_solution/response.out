@@ -1,4 +1,4 @@
 "Request :" 
-Bonjour, comment allez-vous? 
+Hello world! 
 "Response :" 
-[{"language":"fr","score":1.0,"isTranslationSupported":true,"isTransliterationSupported":false}]
+{"documents":[{"id":"1","detectedLanguage":{"name":"English","iso6391Name":"en","confidenceScore":0.81},"warnings":[]}],"errors":[],"modelVersion":"2021-01-05"}
