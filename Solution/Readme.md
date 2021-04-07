@@ -17,31 +17,29 @@ https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/AI+En
 
 # 2 solution is Enable :
 
-Windows :
+Windows :<br>
 => setx COGNITIVE_SERVICE_KEY <API_KEY> /m
-Linux : 
+Linux : <br>
 => export COGNITIVE_SERVICE_KEY=<API_KEY>
-MacOS :
+MacOS :<br>
 => export COGNITIVE_SERVICE_KEY=<API_KEY>
-
-Windows :
+<br>
+Windows :<br>
 => setx COGNITIVE_SERVICE_ENDPOINT <ENDPOINT> /m
-Linux : 
+Linux : <br>
 => export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT>
-MacOS :
+MacOS :<br>
 => export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT>
 
 ## first is cUrl solution script :
 
-Windows :
+Windows :<br>
 => cUrl_Solution/request.bat "The text you want to test for language detection"
 
-Linux :
-=> cd cUrl_Soltion 
+Linux :<br>
 => ./request.sh "The text you want to test for language detection"
 
-MacOS :
-=> cd cUrl_Soltion 
+MacOS :<br>
 => bash request.sh "The text you want to test for language detection"
 
 Response store in => response.out
@@ -49,10 +47,10 @@ Response store in => response.out
 
 ## second is notebook run anaconda cmd or navigator and go to root project :
 
-Ourvrir le notebook :
+Ourvrir le notebook :<br>
 `jupyter notebook P01_01_script.ipynb`
 
 # Comamande utile :
 
-Création du mode slideshow (bien organiser dans le notebook la disposition des diapos : View => Cell Toolbar => Diaporama)
+Création du mode slideshow (bien organiser dans le notebook la disposition des diapos : View => Cell Toolbar => Diaporama)<br>
 `jupyter nbconvert P01_01_script.ipynb --to slides --post serve`
