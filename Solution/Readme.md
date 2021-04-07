@@ -18,18 +18,18 @@ https://s3-eu-west-1.amazonaws.com/static.oc-static.com/prod/courses/files/AI+En
 # 2 solution is Enable :
 
 Windows :<br>
-=> setx COGNITIVE_SERVICE_KEY <API_KEY> /m
+=> setx COGNITIVE_SERVICE_KEY <API_KEY> /m<br>
 Linux : <br>
-=> export COGNITIVE_SERVICE_KEY=<API_KEY>
+=> export COGNITIVE_SERVICE_KEY=<API_KEY><br>
 MacOS :<br>
-=> export COGNITIVE_SERVICE_KEY=<API_KEY>
+=> export COGNITIVE_SERVICE_KEY=<API_KEY><br>
 <br>
 Windows :<br>
-=> setx COGNITIVE_SERVICE_ENDPOINT <ENDPOINT> /m
+=> setx COGNITIVE_SERVICE_ENDPOINT <ENDPOINT> /m<br>
 Linux : <br>
-=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT>
+=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT><br>
 MacOS :<br>
-=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT>
+=> export COGNITIVE_SERVICE_ENDPOINT=<ENDPOINT><br>
 
 ## first is cUrl solution script :
 
