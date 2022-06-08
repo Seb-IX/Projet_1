@@ -43,8 +43,11 @@ def format_response(resultat):
         print("ID document: {}\n".format(doc.id))
 
 
-document = format_document(sys.argv)
+if len(sys.argv) == 1:
+    print("add text as argument for detection (from 1 to N)")
+else:
+    document = format_document(sys.argv)
 
-resultat = language_detection_example(client,document)
+    resultat = language_detection_example(client,document)
 
-format_response(resultat)
+    format_response(resultat)

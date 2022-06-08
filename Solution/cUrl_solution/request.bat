@@ -4,7 +4,7 @@ set input=%1
 :: set input
 :: this line allows to remove quote
 set input=%input:"=%
-
+echo ""
 echo "Request :" >> response.out
 echo %input% >> response.out
 echo "Response :" >> response.out

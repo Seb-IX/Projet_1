@@ -1,14 +1,19 @@
-# Projet configuration
+# Project "crédit"
+<p align="center">
+<img src="https://github.com/Seb-IX/Projet_1/blob/main/Présentation/logo.png" style="width:250px;">
+</p>
+<br>
+The goal of this project is to reinvent the customer experience with a chatbot that will reduce the response time to questions asked by users. <br>
+The only goal of this project is to benchmark the polyglot functionality of the chatbot in the most spoken languages in the world:<br>
 <ul>
-<li>/Enoncé/ :<br>
-	This directory contains statement for project in french</li>
-<li>/InterviewMentor/ :<br>
-	This directory contains interview with my mentor</li>
-<li>/Présentation/ :<br>
-	This directory contains my powerpoint for jury to validated my project</li>
-<li>/Ressource/ :<br>
-	This directory contains ressources to helped or needed for the project</li>
-<li>/Solution/ :<br>
-	This directory contains the solution and the final test submitted to the jury to validate my project.</li>
-<ul>	
-**By TUCCIO Sébastien**
+	<li>Chinese</li>
+	<li>Spanish</li>
+	<li>English</li>
+	<li>Hindi</li>
+	<li>Arabic</li>
+</ul>
+
+To realize the polyglot function we will use the cognitive service of Azure, with the Text Analytic part.
+
+> You will find the different scripts, benchmarks and solutions in the "/Solution" folder.
+
